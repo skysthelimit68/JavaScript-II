@@ -84,7 +84,6 @@ console.log(ticketPriceTotal.reduce((acc, elem) => acc + elem));
 // Problem 1
 //creating a vip group for personal donations greater or equals to $100, comes with special perks
 let vipGroup = runners.filter(elem => elem.donation >= 100);
-
 console.log(vipGroup);
 
 

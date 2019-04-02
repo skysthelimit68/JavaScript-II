@@ -66,12 +66,10 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   let uniq = [];
   //array.filter(elem => (!uniq.includes(elem)));
-  for(let i = 0; i < array.length; i++) {
-    if(!uniq.includes(array[i])) {
-      uniq.push(array[i]);
-    }
-  }
-  //console.log(uniq);
+  array.forEach(elem => {
+    if (!uniq.includes(elem)) uniq.push(elem);
+  })
+  
   // Pass the duplicate free array to the callback function.
   cb(uniq);
 
