@@ -17,13 +17,13 @@ houseOfDogs();
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
-  let counter;
-  return counter++;
+ let counter = 0;
+ return () => ++counter; 
 };
 
 const newCounter = counter();
-//newCounter();
-//newCounter();
+console.log(newCounter());
+console.log(newCounter());
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
@@ -40,8 +40,7 @@ const counterFactory = () => {
   // `decrement` should decrement the counter variable and return it.
 };
 counterFactory();
-console.log(obj.counter);
+console.log(obj.counter); //display initial counter value
 obj.increment();
 obj.increment();
 obj.decrement();
-
