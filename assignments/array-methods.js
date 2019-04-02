@@ -89,9 +89,26 @@ console.log(vipGroup);
 
 
 // Problem 2
-//creating a company teams and rank each company's total fundrasing result
-
+//creating  company team list, tally up all donations from that company and rank each company's total fundrasing result
+let companyList =[]; //used for checking duplicated record
+let companyChart=[];
+runners.forEach(elem => {
+    if(!companyList.includes(elem.company_name)){
+        companyList.push(elem.company_name);
+        let obj = {"company": elem.company_name, "donationTotal": elem.donation};
+        companyChart.push(obj);
+    } else {
+        companyChart[companyList.indexOf(elem.company_name)].donationTotal += elem.donation;
+        //console.log(`more money added to ${elem.company_name} for ${elem.donation}`);
+    }
+})
+console.log(companyChart.sort((a,b) => (a.donationTotal > b.donationTotal)? -1: 1));
 
 
 
 // Problem 3
+//extracting an  list for people with 2XL shirts and sell their emails to dieting/fitness companies... I AM SOOOO BAD
+let XXL = runners.filter(elem => elem.shirt_size  === "2XL");
+
+console.log(XXL);
+

@@ -35,12 +35,14 @@ const counterFactory = () => {
     increment: function(){ this.counter++; console.log(this.counter);},
     decrement: function(){ this.counter--; console.log(this.counter);}
   }
+
+  return obj;
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
-counterFactory();
-console.log(obj.counter); //display initial counter value
-obj.increment();
-obj.increment();
-obj.decrement();
+let bigCounter = counterFactory();
+console.log(bigCounter.counter); //display initial counter value
+bigCounter.increment();
+bigCounter.increment();
+bigCounter.decrement();
