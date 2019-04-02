@@ -107,8 +107,9 @@ console.log(companyChart.sort((a,b) => (a.donationTotal > b.donationTotal)? -1: 
 
 
 // Problem 3
-//extracting an  list for people with 2XL shirts and sell their emails to dieting/fitness companies... I AM SOOOO BAD
+//extracting an email list for people with 2XL shirts and sell their emails to dieting/fitness companies... I AM SOOOO BAD
 let XXL = runners.filter(elem => elem.shirt_size  === "2XL");
-
-console.log(XXL);
+let emailXXL = [];
+XXL.forEach(elem => emailXXL.push(elem.email));
+console.log(emailXXL);
 
