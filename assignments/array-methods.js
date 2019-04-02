@@ -77,10 +77,21 @@ runners.forEach(elem => ticketPriceTotal.push(elem.donation));
 console.log(ticketPriceTotal.reduce((acc, elem) => acc + elem));
 
 // ==== Challenge 5: Be Creative ====
-// Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
+// Now that you have used .forEach(), .map(), .filter(), and .reduce().  
+//I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  
+//Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//creating a vip group for personal donations greater or equals to $100, comes with special perks
+let vipGroup = runners.filter(elem => elem.donation >= 100);
+
+console.log(vipGroup);
+
 
 // Problem 2
+//creating a company teams and rank each company's total fundrasing result
+
+
+
 
 // Problem 3
